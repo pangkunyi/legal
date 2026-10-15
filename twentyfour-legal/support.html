@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
+<title>Support — TwentyFour</title>
+<!--
+  Support page.
+
+  App Store Connect requires a Support URL that "must lead to actual contact
+  information (legal address, email address, telephone number)". A page with
+  a product description but no way to make contact fails that requirement, so
+  the contact block below is mandatory rather than decorative.
+
+  Same rules as the privacy policy: single file, no external requests, no
+  scripts, no cookies.
+-->
+<style>
+  :root {
+    --ink: #1a1f26; --muted: #5b6472; --line: #e3e8ef;
+    --brand: #3f8dfd; --bg: #ffffff; --card: #f5f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6e8ec; --muted: #9aa4b2; --line: #262c35;
+      --brand: #7ab8ff; --bg: #111418; --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 1rem 1.15rem; margin: 1.25rem 0;
+  }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 3rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--line); color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Support</h1>
+<p class="meta">TwentyFour &mdash; published by zowle</p>
+
+<div class="card">
+  <p>TwentyFour is an offline math puzzle: take four numbers and use
+  <strong>+ &minus; &times; &divide;</strong> with parentheses to reach
+  exactly 24. It has no account, no advertising and no network access.</p>
+</div>
+
+<h2>Getting in touch</h2>
+<p>Email <a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>.
+Please include your device model, your operating system version, and the app
+version from <em>Settings &rarr; About</em> (shown at the bottom of the
+settings page).</p>
+<p>zowle<br>
+Room 8201, Building 9, Nantian No. 2 Garden, Futian District, Shenzhen, Guangdong Province</p>
+
+<h2>Common questions</h2>
+
+<h3>My progress is gone. What happened?</h3>
+<p>Progress is stored only on your device. Uninstalling the app, clearing its
+storage, or using the system's "clear app data" function removes it, and it
+cannot be recovered afterwards — there is no server copy. This is also why the
+app never asks you to sign in.</p>
+
+<h3>How do I delete only the puzzles I saved?</h3>
+<p>Open the book mode from the top bar and delete them individually.</p>
+
+<h3>The hint button is greyed out in timed mode.</h3>
+<p>That is intentional. Asking for an answer in a timed run starts a
+30-second cooldown, so that a run measures speed and accuracy rather than how
+fast you can tap.</p>
+
+<h3>Can I change the language?</h3>
+<p>Yes. Open <em>Settings &rarr; Language</em> and pick one of the 21
+languages the app ships, or leave it following your device language. On
+Android 13 and later, your system settings also has a per-app language
+picker that writes the same choice.</p>
+
+<h3>The app makes a sound. How do I turn it off?</h3>
+<p><em>Settings &rarr; Sound &amp; haptics</em>. Sound is off by default;
+haptics are on.</p>
+
+<h3>Does the app send anything anywhere?</h3>
+<p>No. It makes no network requests and declares no network permission. See
+the <a href="https://pangkunyi.github.io/legal/twentyfour-legal/privacy.html">privacy policy</a> for the details.</p>
+
+<h2>Privacy</h2>
+<p>The full text is at <a href="https://pangkunyi.github.io/legal/twentyfour-legal/privacy.html">https://pangkunyi.github.io/legal/twentyfour-legal/privacy.html</a>, and
+it is also readable inside the app under
+<em>Settings &rarr; Privacy policy</em>.</p>
+
+<footer>
+  <p>Source: <code>res/store/legal/support.html</code> &mdash; replace the
+  placeholders, then publish at <code>https://pangkunyi.github.io/legal/twentyfour-legal/support.html</code>.</p>
+</footer>
+
+</main>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
+<title>隐私政策 — TwentyFour</title>
+<!--
+  TwentyFour 隐私政策（简体中文）。
+
+  刻意做成单文件：不引用外部样式表、不加载脚本、不请求字体、不接统计、
+  不设 Cookie。两家商店都要求政策托管在一个稳定、公开可访问、不做地域
+  限制的 URL 上，并且会检查页面本身做了什么——挂一个 CDN 或标签管理器
+  就足以改变审核结论。
+
+  身份信息由 fill_placeholders.py 从 legal/store-identity.json 代入；
+  发布方式与发布前检查项见 legal/HOSTING.md。
+-->
+<style>
+  :root {
+    --ink: #1a1f26;
+    --muted: #5b6472;
+    --line: #e3e8ef;
+    --brand: #3f8dfd;
+    --bg: #ffffff;
+    --card: #f5f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6e8ec;
+      --muted: #9aa4b2;
+      --line: #262c35;
+      --brand: #7ab8ff;
+      --bg: #111418;
+      --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          "Noto Sans CJK SC", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0;
+  }
+  .card strong { color: var(--brand); }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>隐私政策</h1>
+<p class="meta">
+  TwentyFour &middot; 发布者：zowle<br>
+  生效日期：2026 年 10 月 15 日
+</p>
+
+<div class="card">
+  <p><strong>一句话版本。</strong>TwentyFour 不收集、不上传、不分享任何个人
+  数据。没有账号体系，没有广告，没有统计埋点。你在应用里的所有记录都只存在
+  你的设备上，不会离开这台设备。</p>
+</div>
+
+<h2>一、我们收集什么</h2>
+<p>什么都不收集。没有注册流程，不需要邮箱、姓名、设备标识、广告标识，也不
+申请定位权限。</p>
+<p>应用完全不发起任何网络请求。在 Android 上，应用未声明网络权限——这是操作
+系统层面的强制约束，而不是本文档里的一句承诺。</p>
+
+<h2>二、在你设备上保存了什么</h2>
+<p>为了记住设置和进度，应用会把以下内容写入设备本地的偏好设置存储。它们不会
+离开设备，应用也无法从别处读取：</p>
+<ul>
+  <li>你选择的主题、语言和难度等级；</li>
+  <li>音效与触觉反馈开关的状态；</li>
+  <li>最近一次选择的计时模式与时限；</li>
+  <li>你主动收藏进题库的题目；</li>
+  <li>应用内可见的统计信息，例如解题总数、用时、提示次数，以及各难度的
+      个人最佳成绩。</li>
+</ul>
+<p>这些是你自己的对局记录，而不是关于你的个人数据；保存它们只是为了下次
+打开时还能展示给你。</p>
+
+<h2>三、第三方、广告与追踪</h2>
+<p>都没有。应用不含任何广告 SDK、统计 SDK、崩溃上报 SDK、社交 SDK 或支付
+SDK，也没有追踪代码和 Cookie。你的操作不会被分享给任何人——因为根本没有任何
+一方可以被分享。</p>
+
+<h2>四、保存期限与删除</h2>
+<p>我们不保存任何东西。你的收藏和统计只存在于你的设备上，并在以下情况被
+清除：</p>
+<ul>
+  <li>卸载应用或清除其存储；</li>
+  <li>使用操作系统的「清除应用数据」功能；</li>
+  <li>在应用内逐条删除已收藏的题目。</li>
+</ul>
+<p>因为我们手上没有任何副本，所以也就没有需要应你要求删除的东西。如果你想
+清空记录，清除应用存储或卸载应用即可。</p>
+
+<h2>五、未成年人</h2>
+<p>本应用不面向 13 周岁以下的儿童，也无意收集任何人的个人数据，包括儿童的。
+由于本应用完全不收集个人数据，因此既没有可删除的内容，也不需要取得任何
+同意。</p>
+
+<h2>六、你的权利</h2>
+<p>由于应用不收集也不保存个人数据，你没有任何可供访问、更正、导出或删除的
+数据。无论你身处何地，GDPR、CCPA 一类法规赋予个人对其被组织持有的数据行使
+权利的能力；本应用不持有任何此类数据，因此这些权利是天然满足的，而不需要
+一套申请流程。</p>
+
+<h2>七、安全</h2>
+<p>所有数据都留在你的设备上，不做传输，并由设备自身的锁屏、加密与应用沙箱
+保护。因为没有服务器，我们也不可能从服务端被入侵。</p>
+
+<h2>八、政策变更</h2>
+<p>如果后续版本改变了保存的内容，或新增了任何网络访问，我们会在该版本分发
+之前更新本页，并同步修改上方的生效日期。重大变更也会在版本更新说明中写明。</p>
+
+<h2>九、联系我们</h2>
+<p>与本政策有关的问题请发送至
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>，
+或邮寄至 Room 8201, Building 9, Nantian No. 2 Garden, Futian District, Shenzhen, Guangdong Province。</p>
+
+<footer>
+  <p>本政策适用于 TwentyFour 的 Android 与 iOS 移动应用。</p>
+  <p>源文件：<code>res/store/legal/privacy-policy.zh-Hans.html</code> ——
+  替换占位符后发布到 <code>https://pangkunyi.github.io/legal/twentyfour-legal/privacy.html</code>。</p>
+</footer>
+
+</main>
+</body>
+</html>
