@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
+<title>隐私政策 — Mathdoku</title>
+<!--
+  Mathdoku 隐私政策（简体中文）。
+
+  刻意做成单文件：不引用外部样式表、不加载脚本、不请求字体、不接统计、
+  不设 Cookie。两家商店都要求政策托管在一个稳定、公开可访问、不做地域
+  限制的 URL 上，并且会检查页面本身做了什么——挂一个 CDN 或标签管理器
+  就足以改变审核结论。
+
+  身份信息由 legal/fill_placeholders.py 从 legal/store-identity.json 代入；
+  发布方式与发布前检查项见 legal/HOSTING.md。
+-->
+<style>
+  :root {
+    --ink: #1a1f26;
+    --muted: #5b6472;
+    --line: #e3e8ef;
+    --brand: #3f8dfd;
+    --bg: #ffffff;
+    --card: #f5f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6e8ec;
+      --muted: #9aa4b2;
+      --line: #262c35;
+      --brand: #7ab8ff;
+      --bg: #111418;
+      --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+          "Noto Sans CJK SC", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.3; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0;
+  }
+  .card strong { color: var(--brand); }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>隐私政策</h1>
+<p class="meta">
+  Mathdoku &middot; 发布者：zowle<br>
+  生效日期：2026 年 11 月 12 日
+</p>
+
+<div class="card">
+  <p><strong>一句话版本。</strong>Mathdoku 没有账号，也不需要登录。它有
+  一个在线排行榜，也会显示广告，因此确实有两样东西会离开你的设备：你的
+  分数（连同你填写的昵称和你选择的国家或地区），以及 Google 广告服务所需
+  的广告标识符 —— 同一个标识符也是把你的排行榜条目关联起来的关键。其余的
+  一切 —— 你正在做的题目、你写下的笔记、计时、你的最佳成绩、你的设置 ——
+  都只留在你的设备上，从不上传。</p>
+</div>
+
+<h2>一、本政策适用于谁</h2>
+<p>本政策说明 Mathdoku 的 Android 与 iOS 移动应用（Android 包名
+<code>com.zowle.mathdoku</code>，发布者 zowle）会发送什么数据、这些数据
+交给谁、保存多久，以及怎样把它们删除。</p>
+
+<h2>二、会离开你设备的数据</h2>
+<p>应用没有账号，因此从不要求登录、邮箱地址或电话号码。一共会发送四项，
+它们都是为了在排行榜上展示你的记录：</p>
+<ul>
+  <li><strong>你的分数</strong> —— 你解过的每一道题所得分数之和。只有当它
+      高于上一次提交的分数时，应用才会把它发送出去。</li>
+  <li><strong>你的昵称</strong> —— 你在「设置」中输入的名字，最多 20 个字符。
+      如果留空，应用会使用默认昵称 <code>NoName</code>。</li>
+  <li><strong>你的国家或地区</strong> —— 你在「设置」中选择的国家；如果你
+      没有选择，则是设备语言区域中的地区部分。这只是一个粗略的位置，仅此
+      而已：应用不会请求 GPS，不会请求精确位置，也完全没有声明任何定位
+      权限。</li>
+  <li><strong>广告标识符</strong> —— 在 Android 上即 Google 的广告 ID，通过
+      权限 <code>com.google.android.gms.permission.AD_ID</code> 获取。它是
+      Google 为广告用途签发的、可以重置的标识符。</li>
+</ul>
+
+<h3>关于这个标识符，有两点需要知道</h3>
+<p>应用是「按需」读取它的：只有在排行榜需要时才会去取，而不是在应用启动时
+就去取，而且游戏本身绝不会为此等待。另一方面，Google 自己的广告 SDK 会在
+你打开一道题时自行读取它 —— 广告的挑选与效果统计正是靠它完成的。</p>
+<p>如果拿不到广告 ID —— 你重置过它、你关闭了广告个性化、你所在的地区
+Google 不签发它，或者设备上没有 Google Play 服务 —— 应用会自己生成一个
+标识符：在本地生成的、基于时间的 UUID（版本 1）。无论哪一种，游戏体验完全
+相同。</p>
+<p>该标识符会缓存在设备上。因此你之后再重置广告 ID，排行榜上的条目也不会
+改变：应用仍然使用它已经保存的标识符，因为正是它让服务器知道新的分数来自
+同一位玩家。</p>
+<p>应用也不会把标识符、昵称或分数写进设备的日志里。</p>
+
+<h2>三、这些数据会交给谁</h2>
+<p>只有两方，仅有两方：</p>
+<ul>
+  <li><strong>排行榜服务器</strong> <code>gs.zowle.com</code>。应用
+      通过 HTTPS 与它通信：<code>GET /leaderboard/kk</code> 下载公开榜单，
+      <code>POST /leaderboard/kk/submit</code> 发送你的分数、昵称、国家以及那个
+      标识符。</li>
+  <li><strong>Google LLC</strong> —— 广告服务提供方（AdMob，广告应用 ID
+      <code>ca-app-pub-6321505663126261~8041968286</code>）。Google 会收到广告标识符，以及它挑选
+      和统计广告所需的请求数据，并按照它自己的隐私政策处理这些数据。</li>
+</ul>
+<p>没有第三方：应用里没有统计分析服务、崩溃上报服务、社交 SDK，也没有支付
+SDK。</p>
+
+<h2>四、排行榜是公开的</h2>
+<p>排行榜展示得分最高的 100 位玩家。每一条记录都显示昵称、分数和国家或
+地区 —— 这些是公开信息，任何人都能看到。</p>
+<p>下载榜单的请求本身不携带任何标识符：它包含你的 IP 地址和浏览器标识，与
+访问任何普通网页的请求一样。但下载回来的列表里包含每一条记录的标识符，
+应用据此判断哪一行是你自己的，并把它高亮显示。这个标识符只用来找到你
+自己的那一行：应用不会显示它，也不会把它发到任何其他地方。</p>
+
+<h2>五、只留在你设备上的数据</h2>
+<p>为了记住你的设置和进度，应用会把以下内容写入它专属的偏好设置存储
+（Android 的 <code>SharedPreferences</code>）。这些内容不会离开设备，其他
+应用也读不到：</p>
+<ul>
+  <li>你当前的分数，以及你上一次提交的分数；</li>
+  <li>你正在做的那道题，包括你已经填入的数字、你在格子上写下的笔记，以及
+      你在这道题上花掉的时间；</li>
+  <li>棋盘的大小、你启用的运算符，以及你选择的难度；</li>
+  <li>你的配色方案和界面语言；</li>
+  <li>每一组「棋盘大小 + 运算符」组合下的最佳用时、最高分和最佳星级。</li>
+</ul>
+<p>这些是你自己的游戏记录，而不是关于你的个人数据；保存它们只是为了下次
+打开时还能展示给你。</p>
+
+<h2>六、备份</h2>
+<p>应用把它的偏好设置排除在 Android 的自动备份之外。因此这些数据不会被
+上传到 Google Drive，也不会通过设备到设备的迁移复制到新的手机或平板上。
+Mathdoku 的备份里没有任何设置，也没有分数。</p>
+
+<h2>七、广告</h2>
+<p>游玩时，解题界面底部会显示一条横幅广告；完成一道题后会显示一条插屏
+广告。没有激励广告：你不需要为了获得任何东西而去看广告。</p>
+<p>广告由 Google AdMob 投放。广告使用的标识符始终由你掌控：你可以在系统
+设置里重置或删除广告 ID，也可以关闭广告个性化；此时应用会退回到第二节
+所说的本地标识符。</p>
+
+<h2>八、我们不收集什么</h2>
+<p>应用不收集、也从不接触以下内容：</p>
+<ul>
+  <li>精确位置；</li>
+  <li>健康与健身数据；</li>
+  <li>财务信息；</li>
+  <li>短信、照片和视频、音频文件、文件与文档；</li>
+  <li>日历信息和通讯录；</li>
+  <li>浏览历史以及其他应用中的信息；</li>
+  <li>崩溃日志、诊断信息、应用信息与性能数据；</li>
+  <li>Android 设备标识符。</li>
+</ul>
+<p>应用中不存在账号、登录、邮箱地址或电话号码。</p>
+
+<h2>九、保存期限</h2>
+<ul>
+  <li><strong>排行榜条目</strong>：只要排行榜仍在发布，就会保留。你可以随时
+      要求删除自己的条目 —— 见第十节。</li>
+  <li><strong>设备上的数据</strong>：留在你的设备上，直到你清除它或卸载
+      应用。</li>
+  <li><strong>删除请求</strong>：在 30 天内处理完毕。</li>
+</ul>
+
+<h2>十、删除你的数据</h2>
+<p>存在你设备上的数据，由你自己删除：</p>
+<ul>
+  <li>Android：<em>设置 &rarr; 应用 &rarr; Mathdoku &rarr; 存储 &rarr;
+      清除数据</em>，或直接卸载应用；</li>
+  <li>iOS：<em>设置 &rarr; 通用 &rarr; iPhone 储存空间 &rarr; Mathdoku
+      &rarr; 删除 App</em>；</li>
+  <li>如果你使用 Android 备份，也请在系统的备份设置中删除该应用的备份。</li>
+</ul>
+<p>排行榜条目可以在你提出要求后删除。请发邮件到
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>，并说明要删除哪一条
+记录。</p>
+<p>有一处细节很重要：<strong>昵称并不唯一</strong>，所以删除请求必须同时
+包含排行榜上显示的昵称和它旁边的分数（最高分即可）。缺少其中任何一项，我们
+都无法确定你指的是哪位同名玩家。我们会在收到请求后的 30 天内删除该条目，并
+回邮件告知。</p>
+
+<h2>十一、iOS</h2>
+<p>在 iOS 上，广告标识符（IDFA）只有在用户允许后才能获取。本应用的 iOS
+版本不会请求跟踪权限，也没有配置跟踪用途说明，因此在你没有允许该标识符时，
+应用会像 Android 上一样，退回到自己在本地生成的标识符。两个系统上的排行榜
+行为完全一致。</p>
+
+<h2>十二、未成年人</h2>
+<p>本应用不面向 13 周岁以下的儿童，在 Google Play 上也不属于任何「家庭」或
+儿童类目。我们不会有意收集儿童的个人数据。如果你认为有儿童向我们发送了
+个人信息，请联系我们，我们会删除对应记录。</p>
+
+<h2>十三、你的权利</h2>
+<p>你所在地区的法规（如 GDPR 与 CCPA）赋予你对组织所持有的个人数据的权利：
+查阅、更正、导出以及删除。</p>
+<p>对于设备上的数据，你已经拥有这份控制权：它存放在应用专属的存储中，清除
+应用数据或卸载应用即可全部删除。对于排行榜条目，请联系我们，我们会在
+30 天内删除。我们不出售个人数据，也不会把数据分享给第三节所列两方之外的
+任何对象。</p>
+
+<h2>十四、安全</h2>
+<p>应用发送的一切都走 HTTPS，因此传输过程中是加密的。排行榜服务器通过 TLS
+访问，广告流量同样如此加密。你设备上的数据则由操作系统的沙箱和你设备的锁屏
+保护。</p>
+
+<h2>十五、政策变更</h2>
+<p>如果后续版本改变了应用收集或发送的内容，我们会在该版本分发之前更新本页，
+上方的生效日期也会随之修改。重大变更同样会写在应用的更新说明里。</p>
+
+<h2>十六、相关页面</h2>
+<ul>
+  <li>支持页：<a href="https://pangkunyi.github.io/legal/mathdoku-legal/support.html">https://pangkunyi.github.io/legal/mathdoku-legal/support.html</a></li>
+  <li>删除你的数据：<a href="https://pangkunyi.github.io/legal/mathdoku-legal/data-deletion.html">https://pangkunyi.github.io/legal/mathdoku-legal/data-deletion.html</a></li>
+  <li>本隐私政策的英文版：<a href="https://pangkunyi.github.io/legal/mathdoku-legal/privacy.html">https://pangkunyi.github.io/legal/mathdoku-legal/privacy.html</a></li>
+</ul>
+
+<h2>十七、联系我们</h2>
+<p>与本政策有关的问题，或删除数据的请求，可以发邮件到
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>，也可以邮寄至</p>
+<p>zowle<br>
+Room 8201, Building 9, Nantian No. 2 Garden, Futian District, Shenzhen, Guangdong Province</p>
+
+<footer>
+  <p>本政策适用于 Mathdoku 的 Android 与 iOS 移动应用（Android 包名
+  <code>com.zowle.mathdoku</code>）。</p>
+  <p>源文件：<code>res/store/legal/privacy-policy.zh-Hans.html</code> ——
+  替换占位符后发布到 <code>https://pangkunyi.github.io/legal/mathdoku-legal/privacy.zh-Hans.html</code>。</p>
+</footer>
+
+</main>
+</body>
+</html>

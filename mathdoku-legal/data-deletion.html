@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
+<title>Deleting Your Data &mdash; Mathdoku</title>
+<!--
+  Data deletion page.
+
+  Google Play asks for a URL that explains how a user can request the
+  deletion of the data the app collects. Only the leaderboard entry needs a
+  request; everything else lives on the device and is deleted there.
+
+  Same rules as the privacy policy: single file, no external requests, no
+  scripts, no cookies.
+-->
+<style>
+  :root {
+    --ink: #1a1f26; --muted: #5b6472; --line: #e3e8ef;
+    --brand: #3f8dfd; --bg: #ffffff; --card: #f5f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6e8ec; --muted: #9aa4b2; --line: #262c35;
+      --brand: #7ab8ff; --bg: #111418; --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card); border: 1px solid var(--line);
+    border-radius: 12px; padding: 1rem 1.15rem; margin: 1.25rem 0;
+  }
+  .card strong { color: var(--brand); }
+  blockquote {
+    margin: .8rem 0;
+    padding: .2rem 0 .2rem .9rem;
+    border-left: 3px solid var(--line);
+    color: var(--muted);
+  }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 3rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--line); color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Deleting Your Data</h1>
+<p class="meta">
+  Mathdoku &middot; published by zowle<br>
+  Requests are answered within 30 days
+</p>
+
+<div class="card">
+  <p><strong>The short version.</strong> Mathdoku keeps two kinds of
+  data. Almost all of it &mdash; your puzzle, your notes, your timer, your
+  scores, your settings &mdash; is stored on your device only, and you delete
+  it yourself in one step, without writing to anybody. The only thing that
+  lives on a server is your entry on the online leaderboard; that one we
+  delete for you, within 30 days of your request.</p>
+</div>
+
+<h2>1. The data on your device</h2>
+<p>The following is written to the private storage of the app and never
+uploaded: your current score and your last submitted score, the puzzle you
+are working on with the numbers you entered, your notes and the time spent on
+it, the grid size, the operators and the difficulty you picked, your colour
+scheme, your language, and your best time, best score and best stars for
+every combination of grid size and operators.</p>
+<p>You delete all of it yourself:</p>
+<ul>
+  <li>on Android, <em>Settings &rarr; Apps &rarr; Mathdoku &rarr; Storage
+      &rarr; Clear data</em>, or uninstall the app;</li>
+  <li>on iOS, <em>Settings &rarr; General &rarr; iPhone Storage &rarr;
+      Mathdoku &rarr; Delete App</em>;</li>
+  <li>if you use Android backup, remove the backup of the app in the backup
+      settings of the system as well &mdash; the app keeps its preferences out
+      of the backup, so there is nothing of yours in it, but an old backup can
+      be removed there in any case.</li>
+</ul>
+<p>There is no copy of that data anywhere else, so nothing has to be deleted
+on a server afterwards.</p>
+
+<h2>2. The data on the leaderboard</h2>
+<p>The online leaderboard holds one record per player, made of four fields:</p>
+<ul>
+  <li>an identifier &mdash; your advertising identifier, or the local
+      identifier the app made for itself when there is no advertising
+      identifier;</li>
+  <li>your score;</li>
+  <li>your nickname;</li>
+  <li>your country or region.</li>
+</ul>
+<p>Your entry is removed on request. Write to
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a> and tell us which
+entry to delete.</p>
+
+<h3>What the request has to contain</h3>
+<p><strong>The nickname and the score shown next to it on the leaderboard</strong>
+&mdash; your best score is fine. The nickname on its own is not enough,
+because nicknames are not unique: several players can be called the same
+thing, and without the score we cannot tell which of them you mean. A
+request that names the nickname and the score of the entry is enough for us
+to find it.</p>
+<p>An example:</p>
+<blockquote>
+  <p>Please delete my entry on the Mathdoku leaderboard.<br>
+  Nickname: PuzzleFan<br>
+  Score: 1284</p>
+</blockquote>
+
+<h3>What happens after you ask</h3>
+<p>We remove the entry from the leaderboard within 30 days of your request and
+answer the same address by email to confirm it. Until then the entry stays
+visible, because it is part of a public list.</p>
+
+<h2>3. Advertising data</h2>
+<p>The ads of Mathdoku are served by Google AdMob, and Google handles that
+data under its own privacy policy. You are in control of it: you can reset
+your advertising identifier, delete it, delete the advertising data of Google
+in the settings of your device, or turn off ad personalisation. The app itself
+falls back to a local identifier when no advertising identifier is
+available.</p>
+
+<h2>4. Other pages</h2>
+<ul>
+  <li>Privacy policy: <a href="https://pangkunyi.github.io/legal/mathdoku-legal/privacy.html">https://pangkunyi.github.io/legal/mathdoku-legal/privacy.html</a></li>
+  <li>Privacy policy in Simplified Chinese:
+      <a href="https://pangkunyi.github.io/legal/mathdoku-legal/privacy.zh-Hans.html">https://pangkunyi.github.io/legal/mathdoku-legal/privacy.zh-Hans.html</a></li>
+  <li>Support: <a href="https://pangkunyi.github.io/legal/mathdoku-legal/support.html">https://pangkunyi.github.io/legal/mathdoku-legal/support.html</a></li>
+</ul>
+
+<h2>5. Contact</h2>
+<p>Deletion requests and any other privacy question can go to
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>, or by post to</p>
+<p>zowle<br>
+Room 8201, Building 9, Nantian No. 2 Garden, Futian District, Shenzhen, Guangdong Province</p>
+
+<footer>
+  <p>This page applies to the Mathdoku mobile app for Android and iOS
+  (Android package id <code>com.zowle.mathdoku</code>).</p>
+  <p>Source: <code>res/store/legal/data-deletion.html</code> &mdash; replace
+  the placeholders, then publish at <code>https://pangkunyi.github.io/legal/mathdoku-legal/data-deletion.html</code>.</p>
+</footer>
+
+</main>
+</body>
+</html>

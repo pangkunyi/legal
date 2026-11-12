@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="referrer" content="no-referrer">
+<title>Privacy Policy &mdash; Mathdoku</title>
+<!--
+  Mathdoku privacy policy (English).
+
+  One self-contained file on purpose: no stylesheet link, no script, no font
+  request, no analytics, no cookie. Both stores require this to be reachable
+  at a stable, publicly accessible, non-geofenced URL, and they grade what the
+  page actually does - a CDN or a tag manager is enough to change that answer.
+
+  Identity values are substituted from legal/store-identity.json by
+  legal/fill_placeholders.py; see legal/HOSTING.md for how to publish this file
+  and what to check before you do.
+-->
+<style>
+  :root {
+    --ink: #1a1f26;
+    --muted: #5b6472;
+    --line: #e3e8ef;
+    --brand: #3f8dfd;
+    --bg: #ffffff;
+    --card: #f5f7fb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e6e8ec;
+      --muted: #9aa4b2;
+      --line: #262c35;
+      --brand: #7ab8ff;
+      --bg: #111418;
+      --card: #1c2026;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 2.5rem 1.25rem 4rem;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  }
+  main { max-width: 44rem; margin: 0 auto; }
+  h1 { font-size: 1.75rem; line-height: 1.25; margin: 0 0 .35rem; }
+  h2 { font-size: 1.1rem; margin: 2.25rem 0 .6rem; }
+  h3 { font-size: 1rem; margin: 1.5rem 0 .35rem; }
+  p, li { margin: .6rem 0; }
+  ul { padding-left: 1.25rem; }
+  .meta { color: var(--muted); font-size: .9rem; margin: 0 0 2rem; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    margin: 1.25rem 0;
+  }
+  .card strong { color: var(--brand); }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: .875rem;
+  }
+</style>
+</head>
+<body>
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="meta">
+  Mathdoku &middot; published by zowle<br>
+  Effective 12 November 2026
+</p>
+
+<div class="card">
+  <p><strong>The short version.</strong> Mathdoku has no account and no
+  sign-in. It has an online leaderboard and it shows ads, so two things do
+  leave your device: your score, with the nickname and the country you chose,
+  and the advertising identifier that Google's ad service needs &mdash; the
+  same identifier that keeps your leaderboard entry together. Everything else
+  &mdash; the puzzle you are working on, your notes, your timer, your best
+  times, your settings &mdash; stays on your device and is never uploaded.</p>
+</div>
+
+<h2>1. Who this policy covers</h2>
+<p>This policy describes the Mathdoku mobile app for Android and iOS
+(Android package id <code>com.zowle.mathdoku</code>), published by zowle.
+It says what the app sends, who receives it, how long it is kept and how to
+have it removed.</p>
+
+<h2>2. What leaves your device</h2>
+<p>The app has no account, so it never asks for a login, an email address or a
+phone number. Four things are sent, and all of them are sent so that the
+leaderboard can show your entry:</p>
+<ul>
+  <li><strong>Your score</strong> &mdash; the total of the points of every
+      puzzle you have solved. The app sends it when it is better than the
+      score it sent last time.</li>
+  <li><strong>Your nickname</strong> &mdash; the name you type in
+      <em>Settings</em>, up to 20 characters. If you leave it empty, the app
+      uses the default name <code>NoName</code>.</li>
+  <li><strong>Your country or region</strong> &mdash; the country you pick in
+      <em>Settings</em>, or the region part of your device's locale if you
+      have not picked one. This is an approximate location and nothing more:
+      the app never asks for GPS, never asks for a precise location and
+      declares no location permission at all.</li>
+  <li><strong>The advertising identifier</strong> &mdash; Google's Advertising
+      ID on Android, obtained through the permission
+      <code>com.google.android.gms.permission.AD_ID</code>. It is a resettable
+      identifier that Google issues for advertising.</li>
+</ul>
+
+<h3>Two things worth knowing about the identifier</h3>
+<p>The app reads it lazily: it asks for the identifier when the leaderboard
+needs it, not when the app starts, and the game never waits for it. Google's own
+ad SDK reads it on its own, on the other hand, as soon as you open a puzzle,
+because that is how it selects and measures ads.</p>
+<p>If the Advertising ID is not available &mdash; you reset it, you turned off
+ad personalisation, you are in a region where Google does not issue one, or
+the device has no Google Play services &mdash; the app makes an identifier of
+its own: a time-based UUID (version 1) generated on the device. The game plays
+exactly the same either way.</p>
+<p>The identifier is cached on the device. If you reset your Advertising ID
+later, your leaderboard entry does not move: the app keeps using the identifier
+it already has, because that is what tells the server that the new score
+belongs to the same player.</p>
+<p>The app does not write the identifier, your nickname or your score into the
+log of the device either.</p>
+
+<h2>3. Who receives it</h2>
+<p>Two parties, and only two:</p>
+<ul>
+  <li><strong>The leaderboard server</strong> at <code>gs.zowle.com</code>.
+      The app talks to it over HTTPS: <code>GET /leaderboard/kk</code>
+      downloads the public list, and <code>POST /leaderboard/kk/submit</code>
+      sends your score, your nickname, your country and the identifier.</li>
+  <li><strong>Google LLC</strong>, as the provider of the advertising through
+      AdMob (AdMob application id <code>ca-app-pub-6321505663126261~8041968286</code>). Google
+      receives the advertising identifier together with the request data it
+      needs to select and measure ads, and handles that data under its own
+      privacy policy.</li>
+</ul>
+<p>There is no third recipient: no analytics service, no crash-reporting
+service, no social SDK and no payment SDK are part of the app.</p>
+
+<h2>4. The leaderboard is public</h2>
+<p>The leaderboard shows the hundred best players. Every entry shows the
+nickname, the score and the country or region &mdash; that part is public
+information, and anyone can read it.</p>
+<p>The download itself carries no identifier. The request contains your IP
+address and the user agent, exactly like the request for any web page. But the
+list that comes back contains the identifier of every entry, so that the app
+can tell which row is yours and highlight it. The app uses that identifier only
+to find your own row; it never shows it and never sends it anywhere else.</p>
+
+<h2>5. What stays on your device</h2>
+<p>To remember your settings and your progress, the app writes the following
+to its private preferences storage (Android <code>SharedPreferences</code>). It
+never leaves the device, and no other app can read it:</p>
+<ul>
+  <li>your current score and the score you submitted last;</li>
+  <li>the puzzle you are working on, including the numbers you have entered,
+      the notes you wrote on the cells and the time you have spent on it;</li>
+  <li>the size of the grid, the operators you enabled and the difficulty you
+      picked;</li>
+  <li>your colour scheme and the language of the interface;</li>
+  <li>your best time, your best score and your best stars, for every
+      combination of grid size and operators.</li>
+</ul>
+<p>These are your own game records rather than personal data about you. They
+are stored so that the app can show them back to you.</p>
+
+<h2>6. Backups</h2>
+<p>The app excludes its preferences from the automatic backup of Android. That
+data is therefore not uploaded to Google Drive, and it is not copied onto a
+new phone or tablet by the device-to-device transfer. A backup of Mathdoku
+holds no settings and no scores.</p>
+
+<h2>7. Advertising</h2>
+<p>A banner ad sits at the bottom of the puzzle screen while you play, and an
+interstitial ad is shown after you complete a puzzle. There are no rewarded
+ads: you never have to watch an ad to get something.</p>
+<p>The ads are served by Google AdMob. You stay in control of the identifier
+they use: you can reset or delete your Advertising ID, or turn off ad
+personalisation, in your device settings, and the app falls back to the local
+identifier described in section 2.</p>
+
+<h2>8. What is not collected</h2>
+<p>The app does not collect, and never has access to:</p>
+<ul>
+  <li>precise location;</li>
+  <li>health and fitness data;</li>
+  <li>financial information;</li>
+  <li>messages, photos and videos, audio files, files and documents;</li>
+  <li>calendar information and contacts;</li>
+  <li>web browsing history and information from other apps;</li>
+  <li>crash logs, diagnostics, app information and performance data;</li>
+  <li>the Android device identifier.</li>
+</ul>
+<p>There is no account, no sign-in, no email address and no phone number
+anywhere in the app.</p>
+
+<h2>9. How long we keep it</h2>
+<ul>
+  <li><strong>Leaderboard entries</strong> are kept for as long as the
+      leaderboard is published. You can ask for your entry to be removed at any
+      time &mdash; see section 10.</li>
+  <li><strong>Data on your device</strong> stays on your device until you
+      clear it or uninstall the app.</li>
+  <li><strong>Deletion requests</strong> are answered within 30 days.</li>
+</ul>
+
+<h2>10. Deleting your data</h2>
+<p>What lives on your device, you delete yourself:</p>
+<ul>
+  <li>on Android, <em>Settings &rarr; Apps &rarr; Mathdoku &rarr; Storage
+      &rarr; Clear data</em>, or uninstall the app;</li>
+  <li>on iOS, <em>Settings &rarr; General &rarr; iPhone Storage &rarr;
+      Mathdoku &rarr; Delete App</em>;</li>
+  <li>if you use Android backup, remove the backup of the app in the backup
+      settings of the system as well.</li>
+</ul>
+<p>A leaderboard entry is removed on request. Write to
+<a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a> and tell us which
+entry to delete.</p>
+<p>One detail matters: <strong>the nickname is not unique</strong>, so a
+request has to include <strong>the nickname and the score shown next to it</strong>
+on the leaderboard (your best score is fine). Without both, we cannot tell
+which of several players with the same nickname you mean. We remove the entry
+within 30 days of the request and confirm it by email.</p>
+
+<h2>11. iOS</h2>
+<p>On iOS the advertising identifier (IDFA) is only available if you allow it.
+The iOS build of the app does not ask for tracking permission and does not
+carry a tracking usage description, so if you do not allow the identifier the
+app falls back to a local identifier of its own, exactly as it does on Android.
+The leaderboard works the same way on both systems.</p>
+
+<h2>12. Children</h2>
+<p>The app is not directed at children under 13 and is not listed in any
+Families or children category on Google Play. We do not knowingly collect
+personal data from children. If you believe a child has sent us personal
+information, contact us and we will remove the entry.</p>
+
+<h2>13. Your rights</h2>
+<p>Depending on where you live, regulations such as the GDPR and the CCPA give
+you rights over the personal data an organisation holds about you: the right
+to see it, to correct it, to export it and to have it erased.</p>
+<p>For the data on your device you already have that control &mdash; it sits in
+the private storage of the app, and clearing the app's data or uninstalling it
+removes everything. For a leaderboard entry, write to us and we will remove it
+within 30 days. We do not sell personal data, and we do not share it beyond the
+two recipients named in section 3.</p>
+
+<h2>14. Security</h2>
+<p>Everything the app sends travels over HTTPS, so it is encrypted in transit.
+The leaderboard server is reached over TLS, and the ad traffic is encrypted the
+same way. The data on your device is protected by the sandbox of the operating
+system and by the lock screen of your device.</p>
+
+<h2>15. Changes to this policy</h2>
+<p>If a later version of the app changes what it collects or sends, this page
+is updated before that version is distributed, and the effective date above
+changes with it. Material changes are also described in the release notes of
+the app.</p>
+
+<h2>16. Other pages</h2>
+<ul>
+  <li>Support: <a href="https://pangkunyi.github.io/legal/mathdoku-legal/support.html">https://pangkunyi.github.io/legal/mathdoku-legal/support.html</a></li>
+  <li>Deleting your data: <a href="https://pangkunyi.github.io/legal/mathdoku-legal/data-deletion.html">https://pangkunyi.github.io/legal/mathdoku-legal/data-deletion.html</a></li>
+  <li>This policy in Simplified Chinese:
+      <a href="https://pangkunyi.github.io/legal/mathdoku-legal/privacy.zh-Hans.html">https://pangkunyi.github.io/legal/mathdoku-legal/privacy.zh-Hans.html</a></li>
+</ul>
+
+<h2>17. Contact</h2>
+<p>Questions about this policy, or a request to have something deleted, can go
+to <a href="mailto:pangkunyi@gmail.com">pangkunyi@gmail.com</a>, or by post to</p>
+<p>zowle<br>
+Room 8201, Building 9, Nantian No. 2 Garden, Futian District, Shenzhen, Guangdong Province</p>
+
+<footer>
+  <p>This policy applies to the Mathdoku mobile app for Android and iOS
+  (Android package id <code>com.zowle.mathdoku</code>).</p>
+  <p>Source: <code>res/store/legal/privacy-policy.en.html</code> &mdash;
+  replace the placeholders, then publish at <code>https://pangkunyi.github.io/legal/mathdoku-legal/privacy.html</code>.</p>
+</footer>
+
+</main>
+</body>
+</html>
