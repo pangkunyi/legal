@@ -82,12 +82,13 @@
 
 <div class="card">
   <p><strong>The short version.</strong> Mathdoku has no account and no
-  sign-in. It has an online leaderboard and it shows ads, so two things do
-  leave your device: your score, with the nickname and the country you chose,
-  and the advertising identifier that Google's ad service needs &mdash; the
-  same identifier that keeps your leaderboard entry together. Everything else
-  &mdash; the puzzle you are working on, your notes, your timer, your best
-  times, your settings &mdash; stays on your device and is never uploaded.</p>
+  sign-in. It has an online leaderboard and it shows ads. Your score, the
+  nickname and the country you chose go to <em>our own</em> leaderboard
+  server, and the advertising identifier that Google's ad service needs goes
+  to Google &mdash; the same identifier that keeps your leaderboard entry
+  together. Everything else &mdash; the puzzle you are working on, your notes,
+  your timer, your best times, your settings &mdash; stays on your device and
+  is never uploaded.</p>
 </div>
 
 <h2>1. Who this policy covers</h2>
@@ -136,20 +137,24 @@ belongs to the same player.</p>
 log of the device either.</p>
 
 <h2>3. Who receives it</h2>
-<p>Two parties, and only two:</p>
+<p>One company, and only one: zowle, the publisher of this app.</p>
 <ul>
-  <li><strong>The leaderboard server</strong> at <code>gs.zowle.com</code>.
-      The app talks to it over HTTPS: <code>GET /leaderboard/kk</code>
-      downloads the public list, and <code>POST /leaderboard/kk/submit</code>
-      sends your score, your nickname, your country and the identifier.</li>
+  <li><strong>Our own leaderboard server</strong> at
+      <code>gs.zowle.com</code>. We run that server ourselves, so the
+      leaderboard data stays with us and is not handed on to anybody else. The
+      app talks to it over HTTPS: <code>GET /leaderboard/kk</code> downloads the
+      public list, and <code>POST /leaderboard/kk/submit</code> sends your
+      score, your nickname, your country and the identifier.</li>
   <li><strong>Google LLC</strong>, as the provider of the advertising through
       AdMob (AdMob application id <code>ca-app-pub-6321505663126261~8041968286</code>). Google
       receives the advertising identifier together with the request data it
       needs to select and measure ads, and handles that data under its own
-      privacy policy.</li>
+      privacy policy. Google is the only outside party that receives anything
+      from the app.</li>
 </ul>
-<p>There is no third recipient: no analytics service, no crash-reporting
-service, no social SDK and no payment SDK are part of the app.</p>
+<p>There is no other recipient: no analytics service, no crash-reporting
+service, no social SDK and no payment SDK are part of the app, and the
+leaderboard data does not leave our own server.</p>
 
 <h2>4. The leaderboard is public</h2>
 <p>The leaderboard shows the hundred best players. Every entry shows the
